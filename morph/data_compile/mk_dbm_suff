@@ -1,0 +1,9 @@
+sed '4,$w jnk' < ../data/suff_info.c > jnk1
+../data_compile/rpl_blank_0.pl < jnk > jnk1
+rm jnk
+mv jnk1 suff_info.c
+sed '$d' suff_info.c > jnk
+mv jnk suff_info.c
+../data_compile/join_suff.pl < suff_info.c > suff_info.dbm.c
+../data_compile/create_dbm_suff.pl GDBM ../data/suff < suff_info.dbm.c
+rm suff_info.c suff_info.dbm.c

@@ -1,0 +1,20 @@
+SHELL = /bin/sh
+
+.PHONY: user developer
+
+user:
+	tar -czf a.tgz -T lst
+	mkdir guj_mo_0_1
+	cd guj_mo_0_1; tar -xzf ../a.tgz;
+	tar -czf gujarati_mo_0_1.tgz guj_mo_0_1
+	rm -r guj_mo_0_1
+	rm a.tgz
+
+developer:
+	tar -czf a.tgz -T lst_dvlpr
+	mkdir guj_mo_0_1
+	cd guj_mo_0_1; tar -xzf ../a.tgz;
+	tar -czf gujarati_mo_dvlpr_0_1.tgz guj_mo_0_1
+	rm -r guj_mo_0_1
+	rm a.tgz
+

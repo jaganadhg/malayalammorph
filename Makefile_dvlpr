@@ -1,0 +1,21 @@
+SHELL = /bin/sh
+
+SUBDIRS = dict morph/noun/bin morph/kqxaMwa converters
+COMPILE = DATACOMPILE
+
+.PHONY: ${COMPILE} $(SUBDIRS)
+
+all: ${COMPILE} $(SUBDIRS)
+
+DATACOMPILE: morph/noun/raw_data/*.p morph/noun/raw_data/*.t morph/noun/raw_data/Ca morph/noun/raw_data/Ce morph/noun/raw_data/Fe morph/noun/raw_data/map_file
+	cd morph/noun/bin; ./data_compile.sh
+
+$(SUBDIRS): 
+	export LANG=C
+	$(MAKE) -C $@
+
+clean:
+	$(MAKE) -C dict clean
+	$(MAKE) -C morph/noun/bin clean
+	$(MAKE) -C morph/kqxaMwa clean
+	$(MAKE) -C converters clean

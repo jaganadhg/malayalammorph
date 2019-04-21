@@ -1,0 +1,3 @@
+#include "../data/const.h"
+#include "../prog/struct.h"
+struct suff_add_info suff_add_info_ar[SIZEOF_SUFF_ADD]={

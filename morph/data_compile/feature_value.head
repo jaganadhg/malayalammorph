@@ -1,0 +1,3 @@
+#include "../prog/defn.h"
+#include "../data/const.h"
+char fe_info[TOTAL_FE_INFO][INFOSIZE]={

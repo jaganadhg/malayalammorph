@@ -1,0 +1,49 @@
+1. Pre requisites:
+   Gujarati Morphological analyser requires the following resources.
+-- perl,
+-- gdbm, and
+-- gcc
+
+2. Install:
+   To install anusaaraka from the source code, run
+	tar -xvzf gujarati_mo_0_1.tgz
+	cd guj_mo_0_1
+	make
+
+	Add following line to your .bashrc
+	HOME_anu_guj=path_of_anu_installation/guj_mo_0_1
+
+	For example, if you have untarred gujarati_mo_0_1.tgz in /usr/guest, then add 
+	the following line in your .bash_profile
+	export HOME_anu_guj=/usr/guest/guj_mo_0_1
+
+	You will have to run 'source .bash_profile' to make these changes effective.
+	Test that the path is set by 'env | grep HOME_anu_guj'
+
+------------------------------------------------------------------------------
+   
+3. Run:
+
+   It is always a good practice to test/run the software in a well defined area.
+   To run anusaaraka we suggest you to create a new directory, say 'test'
+   somewhere in your area.
+
+- Gujarati morphological analyser takes input from a file. Each word should be on a seperate line.It produces the output in a file with .mo extension. The output is in ISCII. Input should be in ISCII.
+------------------------------------------------------------------------------
+--  Command to run morphological analyser:
+    $HOME_anu_guj/bin/new_mo.sh <filename>
+
+-- To view the output:
+   output will be stored in  <filename>.mo file.
+   To view the output, open <filename>.mo in SIMREDO
+
+------------------------------------------------------------------------------
+For any further queries, clarifications, please contact
+Amba Kulkarni
+email: amba@iiit.net, ambaonwheels@yahoo.co.in
+
+or nandimurali@yahoo.com
+
+URL: http://rsvidyapeetha.ac.in/~anusaaraka
+URL: http://ltrc.iiit.net/~anusaaraka
+-------------------------------------------------------------------------------

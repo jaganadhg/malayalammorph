@@ -1,0 +1,161 @@
+A) output format of Morph analyser
+   -------------------------------
+Output consists of following fields seperated by either blank spaces and/or 
+curly brackets viz '{' and '}'.
+
+Field 1: root
+Field 2: paradigm
+Field 3: category
+Field 4: features
+
+If a word is not analysed, then machine appends <ajFAwa> to the word.
+----------------------------------------------------------------------
+a) Example:
+  Given word: vo
+Morph analysis: 1_uha{uha P any s 1 *1* }/
+
+Explanation about Notation:
+--------------------------
+Multiple Analyis Seperator: /
+
+uha{uha P any s 1 *1* } 
+ |    |   
+ |    |   
+root paradigm
+
+uha{uha P any s 1 *1* } 
+          |   
+          |  
+         Category
+uha{uha P any s 1 *1* } 
+             |   
+             |  
+           Gender
+uha{uha P any s 1 *1* } 
+                |   
+                |  
+            Number
+uha{uha P any s 1 *1* } 
+                  |   
+                  |  
+                Case
+uha{uha P any s 1 *1* } 
+                     |   
+                     |  
+                   Parsarg
+
+b) Different categories, corresponding features & their order in the output.
+
+Category: verb
+Symbol used: v
+Features in the order:
+	tam
+	gender
+	number
+	person
+
+Category: noun
+Symbol used: n
+Features in the order:
+	gender
+	number
+	case
+        parsarg
+
+Category: Pronoun
+Symbol used: P
+Features in the order:
+	gender
+	number
+	case
+        parsarg
+
+Category: Parsarg
+Symbol used: p
+Features in the order: No features
+
+Category: Adjective
+Symbol used: adj
+Features in the order:
+	gender
+	number
+	case
+
+Category: Indeclinable
+Symbol used: avy
+Features in the order: No features
+
+c) Now coming back to the feature values & what do they stand for.
+For Nouns and adjectives :
+gender : m (male)
+	 f (female)
+number : s (singular)
+         p (plural)
+case   : 0 (direct) (i.e. parsarg does not follow such a word, e.g. ladakA)
+         1 (oblique) (i.e. a parsarg will definitely follow this word 
+                      e.g. ladakoM)
+
+For Verbs:
+tam:	IxA/Future/hE/Imperative/kara/nA/nA_2/root/Subj/xA_v/yA
+gender : m (male)
+         f (female)
+number: s (singular)
+        p (plural)
+        h (honorofic)
+person: u (uttam :1st person)
+        m (madhyam : 2nd person)
+        a (anya : 3rd person)
+       
+For Pronouns:
+gender : m (male)
+	 f (female)
+number : s (singular)
+         p (plural)
+case   : 0 (direct) (i.e. parsarg does not follow such a word, e.g. ladakA)
+         1 (oblique) (i.e. a parsarg will definitely follow this word 
+                      e.g. ladakoM)
+parsarg : 1 2 3 4 5 6a 6b 6c 6d 7 8
+
+d) Paradigm list for different categories:
+
+femimine nouns:
+--------------
+rAwa
+BASA
+IraKA
+kudZI
+sIrIM
+bahU
+sUM
+rO
+WAM
+masculine nouns:
+---------------
+Gara
+koTA
+karoXa
+muMdA
+BarA
+aniAM
+upagrahi
+pANI
+arAIM
+uwarAu
+BO
+nAM
+ulaJevAM
+
+Verbs:
+------
+kara
+sOM
+pI
+KAu
+lE
+xe
+ho
+uTa
+jA
+kahi
+Au
+hE(defective verb)
